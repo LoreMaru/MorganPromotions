@@ -1,0 +1,40 @@
+body{
+  background-color: black;
+  border: 0px;
+}
+
+#show-next-image, #show-previous-image{
+  background-color: rgb(129, 8, 8);
+  border: crimson;
+}
+
+.modal-content{
+  background-color: black;
+  border: transparent;
+}
+
+#image-gallery-title{
+    color:rgb(129, 8, 8);
+    text-shadow: 0px 0px 10px red;
+    font-size: 20px;      
+}
+
+.close{
+  color:white;
+  
+  
+}
+
+.btn:focus, .btn:active, button:focus, button:active {
+  outline: none !important;
+  box-shadow: none !important;
+  }
+
+#image-gallery .modal-footer{
+  display: block;
+}
+
+.thumb{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

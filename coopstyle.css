@@ -1,0 +1,259 @@
+body{
+    background-color: black;
+    color: #ececec; /*colore scritte*/
+    font-size: 32px; /* in verità è la misura delle icone del menu*/
+    font-family: 'Syne Mono', monospace;
+    margin: 0;
+    padding: 0;
+    text-align:center;
+    
+}
+
+h2{
+    font-size: 15px;
+}
+p{
+    font-size: 12px;
+}
+
+.grid-container {
+    margin-left: 5rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: repeat( auto-fit, minmax(1fr, 1fr) );
+    gap: 20px 0px;
+    justify-items: center;
+    align-items: start;
+    align-content: start;
+    grid-template-areas:
+      "titolo"
+      "logo"
+      "galleria"
+      "descrizione"
+      "dj"
+      "locali"
+      "eventi"
+      "contatti"
+      "crediti";
+  }
+  .titolo { grid-area: titolo;
+    text-shadow: 3px 3px 30px rgb(250, 6, 6);
+    font-size: 50px;}
+  .logo { grid-area: logo; 
+    align-self: start;}
+  .galleria { grid-area: galleria; }
+  .descrizione { grid-area: descrizione; }
+  .dj { grid-area: dj; }
+  .locali { grid-area: locali;
+background-color: black;}
+  .eventi { grid-area: eventi; }
+  .contatti { grid-area: contatti; }
+  .crediti { grid-area: crediti; }
+
+  .active {
+    color:rgb(129, 8, 8);
+    text-shadow: 0px 0px 10px red;
+    font-size: 30px;
+      }
+
+  /*elimina decorazioni link*/
+a:link, a:visited {
+    text-decoration: none;
+    color: #ececec;
+  }
+  /*---*/
+/*scollbar del browser*/
+body::-webkit-scrollbar {
+    width: 0.50rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #ececec;
+  }
+  /*-----*/
+  /*NavBar*/
+  .navbar {
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 600ms ease;
+    overflow: scroll;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .nav-item {
+    width: 100%;
+     }
+  
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    text-decoration: none;
+    transition: var(--transition-speed);
+    filter: grayscale(100%) opacity(0.7); /*per scurire le icone*/
+    text-shadow: rgb(8, 7, 7) 3px 0px 0px, rgb(8, 7, 7) 2.83487px 0.981584px 0px, rgb(8, 7, 7) 2.35766px 1.85511px 0px, rgb(8, 7, 7) 1.62091px 2.52441px 0px, rgb(8, 7, 7) 0.705713px 2.91581px 0px, rgb(8, 7, 7) -0.287171px 2.98622px 0px, rgb(8, 7, 7) -1.24844px 2.72789px 0px, rgb(8, 7, 7) -2.07227px 2.16926px 0px, rgb(8, 7, 7) -2.66798px 1.37182px 0px, rgb(8, 7, 7) -2.96998px 0.42336px 0px, rgb(8, 7, 7) -2.94502px -0.571704px 0px, rgb(8, 7, 7) -2.59586px -1.50383px 0px, rgb(8, 7, 7) -1.96093px -2.27041px 0px, rgb(8, 7, 7) -1.11013px -2.78704px 0px, rgb(8, 7, 7) -0.137119px -2.99686px 0px, rgb(8, 7, 7) 0.850987px -2.87677px 0px, rgb(8, 7, 7) 1.74541px -2.43999px 0px, rgb(8, 7, 7) 2.44769px -1.73459px 0px, rgb(8, 7, 7) 2.88051px -0.838247px 0px;
+  }
+  
+  .nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: translateX(0);
+    color: red;
+  }
+  
+  .link-text {
+    display: none;
+    margin-left: 1rem;
+    text-shadow: rgb(8, 7, 7) 3px 0px 0px, rgb(8, 7, 7) 2.83487px 0.981584px 0px, rgb(8, 7, 7) 2.35766px 1.85511px 0px, rgb(8, 7, 7) 1.62091px 2.52441px 0px, rgb(8, 7, 7) 0.705713px 2.91581px 0px, rgb(8, 7, 7) -0.287171px 2.98622px 0px, rgb(8, 7, 7) -1.24844px 2.72789px 0px, rgb(8, 7, 7) -2.07227px 2.16926px 0px, rgb(8, 7, 7) -2.66798px 1.37182px 0px, rgb(8, 7, 7) -2.96998px 0.42336px 0px, rgb(8, 7, 7) -2.94502px -0.571704px 0px, rgb(8, 7, 7) -2.59586px -1.50383px 0px, rgb(8, 7, 7) -1.96093px -2.27041px 0px, rgb(8, 7, 7) -1.11013px -2.78704px 0px, rgb(8, 7, 7) -0.137119px -2.99686px 0px, rgb(8, 7, 7) 0.850987px -2.87677px 0px, rgb(8, 7, 7) 1.74541px -2.43999px 0px, rgb(8, 7, 7) 2.44769px -1.73459px 0px, rgb(8, 7, 7) 2.88051px -0.838247px 0px;    
+  }
+  
+  .nav-link i {
+    width: 0.5rem; /*quanto si allarga la barra*/
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    
+  }
+  /*----*/
+/*NavBar per schermi di diverse dimensioni*/
+ /* Small screens */
+ @media only screen and (max-width: 600px) {
+    .navbar {
+      bottom: 0;
+      width: 100vw;
+      height: 5rem;
+    }
+  
+    .logo {
+      display: none;
+    }
+  
+    .navbar-nav {
+      flex-direction: row;
+    }
+  
+    .nav-link {
+      justify-content: center;
+    }
+  
+    main {
+      margin: 0;
+    }
+  }
+  
+  /* Large screens */
+  @media only screen and (min-width: 600px) {
+    .navbar {
+      top: 0;
+      width: 5rem;
+      height: 100vh;
+    }
+  
+    .navbar:hover {
+      width: 16rem;
+    }
+  
+    .navbar:hover .link-text {
+      display: inline;
+    }
+  
+    .navbar:hover .logo svg
+    {
+      margin-left: 11rem;
+    }
+  
+    .navbar:hover .logo-text
+    {
+      left: 0px;
+    }
+  }
+  
+main{
+  display: flex;
+  flex-direction: column;
+}
+/*------*/
+ /* inizio gallery*/
+ .container{
+	margin: 5% auto;
+	width: 210px;
+	height: 140px;
+	position: relative;
+	perspective: 1000px;
+}
+#carousel{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	animation: rotation 20s infinite linear;
+}
+#carousel:hover{
+	animation-play-state: paused;
+}
+#carousel figure{
+	display: block;
+	position: absolute;
+	width: 186px;
+	height: 116px;
+	left: 10px;
+	background: gray;
+	overflow: hidden;
+  border: solid 5px black;
+  padding-top: 0%;
+}
+#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+#carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
+#carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
+#carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
+#carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
+#carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
+#carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
+#carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
+#carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+
+.gallery{
+	-webkit-filter: grayscale(1);
+	cursor: pointer;
+	transition: all .5s ease;
+}
+.gallery:hover{
+	-webkit-filter: grayscale(0);
+  transform: scale(1.2,1.2);
+}
+
+@keyframes rotation{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+}
+/* fine gallery*/
+
+/*dj preferiti*/
+
+@keyframes slide {      
+    50% {     
+      -webkit-clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 70% 100%); 
+    } 
+  }
+
+.navbar {
+  overflow: hidden
+}
+/*----*/

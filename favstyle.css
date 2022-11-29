@@ -1,0 +1,130 @@
+body{
+    background-color: black;
+    color: #dad6d6; /*colore scritte*/
+    font-size: 16px;
+    font-family: 'Syne Mono', monospace;
+    margin: 0;
+    padding: 0;
+    text-align:center;
+    margin: 10px;
+}
+
+.dj { grid-area: dj; }
+
+  /*elimina decorazioni link*/
+  a:link, a:visited {
+    text-decoration: none;
+    color: #ececec;
+  }
+
+  .active {
+    color:rgb(129, 8, 8);
+    text-shadow: 0px 0px 10px red;
+    font-size: 20px;
+      }
+  /*---*/
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25%, 25%, 25%;
+    gap: 0px 0px;
+    grid-template-areas:
+      "."
+      "."
+      ".";
+  }
+  .item-a {
+    justify-self: start;
+    align-self: start;
+
+  }
+  .item-b {
+    justify-self: center;
+  }
+.item-c {
+  justify-self: top;
+  align-self: center;
+}
+
+/*scollbar del browser*/
+body::-webkit-scrollbar {
+  width: 0.50rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ececec;
+}
+/*-----*/
+  
+  /*slide locali*/
+  #slides {
+    display: none
+  }
+
+  #slides .slidesjs-navigation {
+    margin-top:3px;
+  }
+
+  #slides .slidesjs-previous {
+    margin-right: 5px;
+    float: left;
+  }
+
+  #slides .slidesjs-next {
+    margin-right: 5px;
+    float: left;
+  }
+
+  .slidesjs-pagination {
+    margin: 6px 0 0;
+    float: right;
+    list-style: none;
+  }
+
+  .slidesjs-pagination li {
+    float: left;
+    margin: 0 1px;
+  }
+
+  .slidesjs-pagination li a {
+    display: block;
+    width: 13px;
+    height: 0;
+    padding-top: 13px;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/139719/pagination.png");
+    background-position: 0 0;
+    float: left;
+    overflow: hidden;
+  }
+
+  .slidesjs-pagination li a.active,
+  .slidesjs-pagination li a:hover.active {
+    background-position: 0 -13px
+  }
+
+  .slidesjs-pagination li a:hover {
+    background-position: 0 -26px
+  }
+
+  #slides a:link,
+  #slides a:visited {
+    color: #333
+  }
+
+  #slides a:hover,
+  #slides a:active {
+    color: #9e2020
+  }
+
+  .navbar {
+    overflow: hidden
+  }
+  /*fine slide locali*/
+  /*secondo slide*/
+  
+  /*fine secondo slide*/
